@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Glass Image Paster</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-liquid">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="glass-card">
+        <div class="input-container">
+            <input type="text" id="imageUrlInput" placeholder="Вставьте ссылку или саму картинку (Ctrl+V)..." autocomplete="off">
+        </div>
+
+        <div class="preview-container" id="previewContainer">
+            <div class="placeholder-text" id="placeholderText">Превью появится здесь</div>
+            <img id="imagePreview" alt="Image Preview" style="display: none;">
+            <canvas id="conversionCanvas" style="display: none;"></canvas>
+        </div>
+
+        <div class="action-container">
+            <div class="select-wrapper">
+                <select id="formatSelect">
+                    <option value="image/png">PNG</option>
+                    <option value="image/jpeg">JPG</option>
+                    <option value="image/webp">WEBP</option>
+                </select>
+            </div>
+            <button id="downloadBtn" disabled>
+                <span>Сохранить</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
